@@ -14,17 +14,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.marcos.library.dao.BookDao;
 import com.marcos.library.model.Book;
+import com.marcos.library.service.CrawlerService;
 
 @RestController
 @RequestMapping(path = "/books")
 public class BookController {
 	@Autowired
 	private BookDao bookDao;
+	@Autowired
+	private CrawlerService crawlerService;
 	
 	@GetMapping
-	public ResponseEntity<List<Book>> getBooks() {
-		List<Book> books = bookDao.findAll();
-		return new ResponseEntity<List<Book>>(books, HttpStatus.OK);
+	public ResponseEntity<List<Book>> getBooks() throws Exception {
+//		List<Book> books = bookDao.findAll();
+//		return new ResponseEntity<List<Book>>(books, HttpStatus.OK);
+		crawlerService.getPageHtml();
+		return null;
 	}
 	
 	@PostMapping

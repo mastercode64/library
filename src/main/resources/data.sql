@@ -1,0 +1,1 @@
+insert into book(book_id,title,description,isbn,language)values(1234,'Book title example','Book description example','9781617293290','BR')

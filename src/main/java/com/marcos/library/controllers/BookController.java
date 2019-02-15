@@ -1,7 +1,5 @@
 package com.marcos.library.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.marcos.library.dao.BookDao;
 import com.marcos.library.model.Book;
+import com.marcos.library.model.BookList;
 import com.marcos.library.service.CrawlerService;
 
 @RestController
@@ -25,11 +24,10 @@ public class BookController {
 	private CrawlerService crawlerService;
 	
 	@GetMapping
-	public ResponseEntity<List<Book>> getBooks() throws Exception {
+	public ResponseEntity<BookList> getBooks() throws Exception {
 //		List<Book> books = bookDao.findAll();
-//		return new ResponseEntity<List<Book>>(books, HttpStatus.OK);
-		crawlerService.getPageHtml();
-		return null;
+		BookList books = crawlerService.getBooksFromUrl();		
+		return new ResponseEntity<BookList>(books, HttpStatus.OK);
 	}
 	
 	@PostMapping

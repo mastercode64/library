@@ -39,7 +39,7 @@ Simple Rest API library for inserting and retrieving books. Also using Jsoup as 
   
   
   
-  **Insert new book**
+**Insert new book**
 ----
   Send json data.
 

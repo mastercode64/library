@@ -54,7 +54,6 @@ Simple Rest API library for inserting and retrieving books. Also using Jsoup as 
 *  **Body Params**
 
     `{
-        "bookId": 1235,
         "title": "title example",
         "description": "description example",
         "isbn": "isbn example",
@@ -88,7 +87,7 @@ Simple Rest API library for inserting and retrieving books. Also using Jsoup as 
 
   * **Code:** 200 <br />
     **Content:** `{
-    "numberBooks": 30,
+    "numberBooks": 2,
     "books": [
         {
             "bookId": null,

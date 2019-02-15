@@ -22,10 +22,6 @@ Simple Rest API library for inserting and retrieving books. Also using Jsoup as 
  
    `id=[integer]`
 
-* **Data Params**
-
-  None
-
 * **Success Response:**
 
   * **Code:** 200 <br />
@@ -40,7 +36,41 @@ Simple Rest API library for inserting and retrieving books. Also using Jsoup as 
 * **Error Response:**
 
   * **Code:** 404 NOT FOUND <br />
+  
+  
+  
+  **Insert new book**
+----
+  Send json data.
 
+* **URL**
+
+  /books
+
+* **Method:**
+
+  `POST`
+  
+*  **Body Params**
+
+    `{
+        "bookId": 1235,
+        "title": "title example",
+        "description": "description example",
+        "isbn": "isbn example",
+        "language": "pt-br"
+    }`
+
+* **Success Response:**
+
+  * **Code:** 201 <br />
+    **Content:** `{
+    "bookId": 1235,
+    "title": "title example",
+    "description": "description example",
+    "isbn": "isbn example",
+    "language": "pt-br"
+}`
 
 
 ## Built With

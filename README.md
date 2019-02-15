@@ -72,6 +72,42 @@ Simple Rest API library for inserting and retrieving books. Also using Jsoup as 
     "language": "pt-br"
 }`
 
+**Search books using web crawler**
+----
+  Retrieve books from https://kotlinlang.org/docs/books.html.
+
+* **URL**
+
+  /books
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{
+    "numberBooks": 30,
+    "books": [
+        {
+            "bookId": null,
+            "title": "Kotlin in Action",
+            "description": "Kotlin in Action teaches you to use the Kotlin language for production-quality applications. Written for experienced Java developers, this example-rich book goes further than most language books, covering interesting topics like building DSLs with natural language syntax.The book is written by Dmitry Jemerov and Svetlana Isakova, developers on the Kotlin team.Chapter 6, covering the Kotlin type system, and chapter 11, covering DSLs, are available as a free preview on the publisher Web site.",
+            "isbn": "9781617293290",
+            "language": "en"
+        },
+        {
+            "bookId": null,
+            "title": "Kotlin for Android Developers",
+            "description": "Kotlin for Android Developers is a book by Antonio Leiva showing how Kotlin can be used for creating an Android application from scratch.",
+            "isbn": "Unavailable",
+            "language": "en"
+        }
+      ]
+    }`
+
+
 
 ## Built With
 

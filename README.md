@@ -114,3 +114,4 @@ Simple Rest API library for inserting and retrieving books. Also using Jsoup as 
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Spring](https://spring.io/) - Spring framework, JPA, Boot
 * [Jsoup](https://jsoup.org/) - Web crawler
+* [Lombok Project](https://projectlombok.org/setup/eclipse) - Getters and Setters generator
